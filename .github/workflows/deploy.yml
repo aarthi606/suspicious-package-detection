@@ -53,7 +53,7 @@ jobs:
         run: |
           ssh -o StrictHostKeyChecking=no -i private-key.pem ubuntu@54.153.34.196<< EOF
             docker pull 160885283675.dkr.ecr.us-west-1.amazonaws.com/suspiciouspackage:latest
-            docker run -d -p 80:80160885283675.dkr.ecr.us-west-1.amazonaws.com/suspiciouspackage:latest
+            docker run -d -p 8080:8080 160885283675.dkr.ecr.us-west-1.amazonaws.com/suspiciouspackage:latest
           EOF
 
       # Step 9: Clean up (delete private key after use)
